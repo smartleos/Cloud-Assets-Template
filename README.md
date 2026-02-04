@@ -1,10 +1,26 @@
 # ☁️ Cloud-Assets Template
 
-[![Optimize Images to WebP](https://github.com/eric861129/Cloud-Assets-Template/actions/workflows/optimize-images.yml/badge.svg)](https://github.com/eric861129/Cloud-Assets-Template/actions/workflows/optimize-images.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<div align="center">
 
-這是一個 **GitHub 圖床模板**，專為部落格、Markdown 文件及開發者設計。
-只要 **Fork** 這個專案，就能擁有一個具備 **自動轉檔 WebP**、**CDN 加速** 與 **自動生成圖庫頁面** 的個人圖床。
+![Optimize Images to WebP](https://github.com/eric861129/Cloud-Assets-Template/actions/workflows/optimize-images.yml/badge.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/eric861129/Cloud-Assets-Template)
+![GitHub last commit](https://img.shields.io/github/last-commit/eric861129/Cloud-Assets-Template)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+**🚀 一鍵擁有個人自動化圖床！**
+**支援 WebP 自動優化、jsDelivr CDN 加速、自動生成美觀圖庫頁面。**
+
+[查看 Demo 演示](https://eric861129.github.io/Cloud-Assets-Template/) · [報告問題](https://github.com/eric861129/Cloud-Assets-Template/issues) · [提交建議](https://github.com/eric861129/Cloud-Assets-Template/pulls)
+
+</div>
+
+---
+
+## 📸 介面預覽
+
+### 自動生成的圖庫頁面
+![Gallery Preview](https://cdn.jsdelivr.net/gh/eric861129/Cloud-Assets-Template@main/Share/example.webp)
+*圖：自動生成的靜態網頁，支援樹狀目錄與一鍵複製*
 
 ## ✨ 特色功能
 
