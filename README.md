@@ -1,33 +1,78 @@
-# ☁️ Cloud-Assets
+# ☁️ Cloud-Assets Template
 
-這是一個基於 GitHub 的個人自動化圖床解決方案。專為部落格、Markdown 文件及開發者設計，結合了 **WebP 自動優化**、**jsDelivr CDN 加速** 以及 **自動化圖庫索引** 功能。
+[![Optimize Images to WebP](https://github.com/eric861129/Cloud-Assets-Template/actions/workflows/optimize-images.yml/badge.svg)](https://github.com/eric861129/Cloud-Assets-Template/actions/workflows/optimize-images.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+這是一個 **GitHub 圖床模板**，專為部落格、Markdown 文件及開發者設計。
+只要 **Fork** 這個專案，就能擁有一個具備 **自動轉檔 WebP**、**CDN 加速** 與 **自動生成圖庫頁面** 的個人圖床。
 
 ## ✨ 特色功能
 
-- 🖼️ **自動圖片優化**：透過 GitHub Actions，上傳的 JPG/PNG 會自動轉換為 WebP 格式，並刪除原圖以節省空間。
-- 🚀 **CDN 加速**：整合 [jsDelivr](https://www.jsdelivr.com/)，提供全球快速的圖片存取體驗。
-- 📂 **自動分組圖庫**：自動產生 `index.html` 靜態頁面，按資料夾結構分類，方便管理。
-- 📋 **一鍵複製**：靜態網頁版提供一鍵複製 Markdown 語法與 CDN 連結的功能。
-- 🤖 **完全自動化**：您只需要負責「上傳圖片」，剩下的工作都由 GitHub Actions 完成。
+- 🛠️ **開箱即用**：Fork 後即可使用，無需複雜設定。
+- 🖼️ **自動圖片優化**：上傳 JPG/PNG 自動轉為 WebP 並刪除原圖，節省空間。
+- 🚀 **CDN 加速**：整合 [jsDelivr](https://www.jsdelivr.com/)，全球高速存取。
+- 📂 **自動圖庫索引**：自動生成 `index.html`，以資料夾結構展示圖片。
+- 📋 **一鍵複製**：網頁版提供 CDN 連結與 Markdown 語法的一鍵複製功能。
+- 🆓 **完全免費**：利用 GitHub Repo 與 GitHub Pages 託管。
 
-## 🚀 快速開始
+## 🚀 快速開始 (How to Use)
 
-1. **Fork 本專案** 並改名。
-2. **上傳圖片**：將圖片丟入任何資料夾中並推送。
-3. **開啟 GitHub Pages**：在 Settings > Pages 設定 `main` 分支為來源。
-4. **獲取連結**：訪問 `https://<YOUR_ID>.github.io/Cloud-Assets/` 即可看到您的專屬圖庫。
+### 1. 建立您的圖床
+點擊右上角的 **[Use this template](https://github.com/new?template_name=Cloud-Assets-Template&template_owner=eric861129)** 按鈕 (或 Fork 本專案)，建立一個新的 Repository（例如命名為 `my-assets`）。
 
-## 🔗 連結格式
+### 2. 開啟 GitHub Actions
+進入您新建立的 Repo，點選上方的 **Actions** 頁籤，如果看到警告，請點擊 **"I understand my workflows, go ahead and enable them"**。
 
-使用 jsDelivr 加速的標準連結：
-`https://cdn.jsdelivr.net/gh/eric861129/Cloud-Assets@main/path/to/image.webp`
+### 3. 設定 GitHub Pages
+1. 進入 **Settings** > **Pages**。
+2. 在 **Build and deployment** > **Source** 選擇 **Deploy from a branch**。
+3. **Branch** 選擇 `main` (或 `master`)，資料夾選擇 `/ (root)`。
+4. 按下 **Save**。
 
-## 🛠️ 技術架構
+### 4. 上傳圖片
+您可以直接在 GitHub 網頁上操作，或 Clone 到本地端操作：
+- 將圖片 (JPG, PNG) 放入 `Share/`、`Blog/` 或任何您建立的資料夾中。
+- **Push** 提交變更。
 
-- **Language**: Python (Pillow)
-- **CI/CD**: GitHub Actions
-- **Hosting**: GitHub Pages
-- **CDN**: jsDelivr
+### 5. 等待自動處理
+- GitHub Actions 會自動觸發 `Optimize Images to WebP` 流程。
+- 圖片會被轉為 `.webp`。
+- `index.html` 會被更新。
+
+### 6. 使用圖片
+等待 GitHub Pages 部署完成（約 1-2 分鐘）後，訪問：
+`https://<您的帳號>.github.io/<Repo名稱>/`
+
+您將看到所有圖片的預覽，並可直接複製連結。
 
 ---
-Made with ❤️ by [eric861129](https://github.com/eric861129)
+
+## 🔗 連結格式範例
+
+您的圖片連結將會是：
+`https://cdn.jsdelivr.net/gh/<您的帳號>/<Repo名稱>@main/<圖片路徑>.webp`
+
+例如：
+`https://cdn.jsdelivr.net/gh/eric861129/my-assets@main/Share/example.webp`
+
+## 📂 目錄結構說明
+
+- `Blog/`、`Share/`：預設的分類資料夾，您可以自由新增、刪除或重新命名資料夾。
+- `optimize.py`：核心自動化腳本 (Python)。
+- `index.html`：自動生成的圖庫首頁 (請勿手動大量修改，因為會被腳本覆蓋)。
+- `.github/workflows/`：自動化流程設定檔。
+
+## 🛠️ 技術細節
+
+- **Core**: Python (Pillow) 用於圖片處理與 HTML 生成。
+- **Automation**: GitHub Actions 監聽 Push 事件。
+- **Hosting**: GitHub Pages 託管靜態頁面。
+- **CDN**: jsDelivr 提供內容傳遞網路。
+
+## 🤝 貢獻
+
+歡迎提交 Issue 或 Pull Request 來改進這個模板！詳情請見 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 📄 授權
+
+本專案採用 [MIT License](LICENSE)。

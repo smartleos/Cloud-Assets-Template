@@ -3,6 +3,15 @@ from PIL import Image
 
 REPO_OWNER = "eric861129"
 REPO_NAME = "Cloud-Assets"
+
+# 嘗試從 GitHub Actions 環境變數獲取 owner/repo
+github_repository = os.getenv("GITHUB_REPOSITORY")
+if github_repository:
+    parts = github_repository.split("/")
+    if len(parts) == 2:
+        REPO_OWNER = parts[0]
+        REPO_NAME = parts[1]
+
 BRANCH = "main"
 CDN_BASE_URL = f"https://cdn.jsdelivr.net/gh/{REPO_OWNER}/{REPO_NAME}@{BRANCH}"
 
