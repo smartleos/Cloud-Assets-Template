@@ -1,0 +1,33 @@
+# ☁️ Cloud-Assets
+
+這是一個基於 GitHub 的個人自動化圖床解決方案。專為部落格、Markdown 文件及開發者設計，結合了 **WebP 自動優化**、**jsDelivr CDN 加速** 以及 **自動化圖庫索引** 功能。
+
+## ✨ 特色功能
+
+- 🖼️ **自動圖片優化**：透過 GitHub Actions，上傳的 JPG/PNG 會自動轉換為 WebP 格式，並刪除原圖以節省空間。
+- 🚀 **CDN 加速**：整合 [jsDelivr](https://www.jsdelivr.com/)，提供全球快速的圖片存取體驗。
+- 📂 **自動分組圖庫**：自動產生 `index.html` 靜態頁面，按資料夾結構分類，方便管理。
+- 📋 **一鍵複製**：靜態網頁版提供一鍵複製 Markdown 語法與 CDN 連結的功能。
+- 🤖 **完全自動化**：您只需要負責「上傳圖片」，剩下的工作都由 GitHub Actions 完成。
+
+## 🚀 快速開始
+
+1. **Fork 本專案** 並改名。
+2. **上傳圖片**：將圖片丟入任何資料夾中並推送。
+3. **開啟 GitHub Pages**：在 Settings > Pages 設定 `main` 分支為來源。
+4. **獲取連結**：訪問 `https://<YOUR_ID>.github.io/Cloud-Assets/` 即可看到您的專屬圖庫。
+
+## 🔗 連結格式
+
+使用 jsDelivr 加速的標準連結：
+`https://cdn.jsdelivr.net/gh/eric861129/Cloud-Assets@main/path/to/image.webp`
+
+## 🛠️ 技術架構
+
+- **Language**: Python (Pillow)
+- **CI/CD**: GitHub Actions
+- **Hosting**: GitHub Pages
+- **CDN**: jsDelivr
+
+---
+Made with ❤️ by [eric861129](https://github.com/eric861129)
