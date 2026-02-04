@@ -19,7 +19,9 @@
 ## 📸 介面預覽
 
 ### 自動生成的圖庫頁面
-![Gallery Preview](https://cdn.jsdelivr.net/gh/eric861129/Cloud-Assets-Template@main/Share/example.webp)
+![Cloud-Assets-Template](https://github.com/user-attachments/assets/28ed5b5f-09a0-4e9d-b829-ebbda88d3010)
+
+
 *圖：自動生成的靜態網頁，支援樹狀目錄與一鍵複製*
 
 ## ✨ 特色功能
